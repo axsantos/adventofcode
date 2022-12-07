@@ -8,9 +8,9 @@ dir_sizes = {}
 for line in data.splitlines():
     if line.startswith("$ cd"):
         # update current dir
-        print(f"changing dir to [{line[5:]}]")
+        #print(f"changing dir to [{line[5:]}]")
         current_dir = (current_dir / line[5:]).resolve()
-        print(f"in {current_dir}")
+        #print(f"in {current_dir}")
 
     elif line.startswith("$ ls"):
         continue
@@ -20,7 +20,7 @@ for line in data.splitlines():
         # update current dir size
         line = line.split(" ")
         size = int(line[0])
-        print(f"[{line[1]}]: process sizes > {size}")
+        #print(f"[{line[1]}]: process sizes > {size}")
         if not dir_sizes.get(str(current_dir)):
             dir_sizes[str(current_dir)] = size
         else:
