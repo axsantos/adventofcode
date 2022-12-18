@@ -44,10 +44,6 @@ for round in range(1, 21):
             monkeys[next_monkey].items.append(item)
             monkey.inspected += 1
 
-#for monkey in monkeys:
-#    print(monkey.items)
-#    print(monkey.inspected)
-
 inspected = sorted([monkey.inspected for monkey in monkeys], reverse = True)
 print(inspected[0] * inspected[1])
 
