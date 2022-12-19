@@ -29,7 +29,6 @@ def right_order(x, y):
 
     return None
 
-
 for pair in data.split("\n\n"):
     p = []
     for packet in pair.splitlines():
